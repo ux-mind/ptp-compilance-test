@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import RightSidebar from './components/RightSidebar';
 import Content from './components/Content/Content';
-import Footer from './components/Footer';
 
 const App = () => {
 	return (
