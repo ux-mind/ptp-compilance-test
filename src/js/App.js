@@ -4,10 +4,8 @@ import Footer from './components/Footer';
 
 const App = () => {
 	return (
-		<div className="app">
+		<div className="ms-body-wrapper">
 			<Header />
-			<div>Content</div>
-			<Footer />
 		</div>
 	);
 };
