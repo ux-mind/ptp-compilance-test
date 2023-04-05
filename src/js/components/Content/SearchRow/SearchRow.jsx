@@ -1,5 +1,6 @@
 import React from 'react';
 import searchIcon from '../../../../assets/images/icon-search.svg';
+import { Link } from 'react-router-dom';
 
 const SearchRow = () => {
 	return (
@@ -164,10 +165,11 @@ const SearchRow = () => {
 					</li>
 				</ul>
 			</form>
-			<a
+			<Link
+				to="/final-submission-add-screen"
 				className="ms-icon-btn ms-plus-icon-btn d-flex align-items-center justify-content-center mx-2"
 				type="button"
-				href="final-submission-add-screen.html"
+				// href="final-submission-add-screen.html"
 			>
 				<svg
 					width="18"
@@ -183,7 +185,7 @@ const SearchRow = () => {
 						fill="currentColor"
 					/>
 				</svg>
-			</a>
+			</Link>
 			{/* TODO: Add New Model Popup Start  */}
 			<div
 				className="modal fade ms-addmodel-popup"

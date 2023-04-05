@@ -151,6 +151,7 @@ h6 {
 	z-index: 999;
 	transition: all 0.5s ease;
 	color: #3c424c;
+	cursor: pointer;
 }
 .ms-sidebar.active ~ .ms-angle-icon {
 	left: 195px;

@@ -172,6 +172,9 @@ module.exports = {
 				use: [
 					{
 						loader: MiniCssExtractPlugin.loader
+						// options: {
+						// 	hmr: isDev //hot model reloading - updates without page reload
+						// }
 					},
 					'css-loader'
 				]

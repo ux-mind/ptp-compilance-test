@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Sidebar = () => {
+	const [sidebarOpened, setSidebarOpened] = useState(false);
+
 	return (
 		<>
-			<div className="ms-sidebar position-fixed start-0 text-center" id="ms-sidebar">
+			<div
+				className={`ms-sidebar position-fixed start-0 text-center${
+					sidebarOpened ? ' active' : ''
+				}`}
+				id="ms-sidebar"
+			>
 				<ul className="ms-sidebar-menu p-0">
 					<li>
 						<a href="#.">
@@ -177,7 +184,7 @@ const Sidebar = () => {
 			<a
 				className="ms-angle-icon d-flex align-items-center justify-content-center"
 				id="ms-menu-toggle"
-				href="#."
+				onClick={() => setSidebarOpened((prev) => !prev)}
 			>
 				<svg
 					width="18"
