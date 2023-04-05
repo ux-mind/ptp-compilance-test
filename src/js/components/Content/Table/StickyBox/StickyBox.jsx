@@ -1,5 +1,6 @@
 import React from 'react';
 
+// TODO: configure popup
 const StickyBox = () => {
 	return (
 		<div className="ms-defaultValue-sticky-box d-flex align-items-center justify-content-between d-none">
@@ -17,7 +18,7 @@ const StickyBox = () => {
 					/>
 				</svg>
 				<span className="ms-3 me-2">5</span>
-				Items defaultValue
+				Items Selected
 			</div>
 			<div className="ms-download-icon d-flex align-items-center justify-content-center">
 				<svg

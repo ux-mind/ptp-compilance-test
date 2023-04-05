@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import searchIcon from '../../../../assets/images/icon-search.svg';
 import { Link } from 'react-router-dom';
 
 const SearchRow = () => {
+	const [searchMenuOpened, setSearchMenuOpened] = useState(false);
+
+	useEffect(() => {
+		document.addEventListener('click', (e) => {
+			const target = e.target;
+
+			if (!target.closest('.button-dropdown')) {
+				setSearchMenuOpened(false);
+			}
+		});
+
+		return () => {
+			document.removeEventListener('click', (e) => {
+				const target = e.target;
+
+				if (!target.closest('.button-dropdown')) {
+					setSearchMenuOpened(false);
+				}
+			});
+		};
+	}, []);
+
 	return (
 		<div className="ms-top-area d-flex justify-content-end position-relative mb-2">
 			<form className="position-relative">
@@ -12,9 +34,9 @@ const SearchRow = () => {
 				<ul className="nav position-absolute">
 					<li className="button-dropdown">
 						<a
-							// href="javascript:void(0)"
 							href="#"
-							className="dropdown-toggle"
+							className={`dropdown-toggle${searchMenuOpened ? ' active' : ''}`}
+							onClick={() => setSearchMenuOpened((prev) => !prev)}
 						>
 							<svg
 								width="17"
@@ -31,7 +53,7 @@ const SearchRow = () => {
 						</a>
 						<ul
 							className="dropdown-menu ms-filter-dropdown position-absolute"
-							style={{ display: 'none' }}
+							style={{ display: `${searchMenuOpened ? 'block' : 'none'}` }}
 						>
 							<li>
 								<h3>Advanced Search</h3>
