@@ -3,24 +3,26 @@ import React from 'react';
 // TODO: configure popup
 const StickyBox = () => {
 	return (
-		<div className="ms-defaultValue-sticky-box d-flex align-items-center justify-content-between d-none">
-			<div className="text-white d-flex align-items-center">
-				<svg
-					width="12"
-					height="12"
-					viewBox="0 0 12 12"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M12 1.05L10.95 0L6 4.95L1.05 0L0 1.05L4.95 6L0 10.95L1.05 12L6 7.05L10.95 12L12 10.95L7.05 6L12 1.05Z"
-						fill="white"
-					/>
-				</svg>
-				<span className="ms-3 me-2">5</span>
-				Items Selected
+		<div className="ms-defaultValue-sticky-box d-flex align-items-center justify-content-between">
+			<div className="text-white d-flex w-100 align-items-center">
+				<button className="ms-sticky-box-close">
+					<svg
+						width="12"
+						height="12"
+						viewBox="0 0 12 12"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M12 1.05L10.95 0L6 4.95L1.05 0L0 1.05L4.95 6L0 10.95L1.05 12L6 7.05L10.95 12L12 10.95L7.05 6L12 1.05Z"
+							fill="white"
+						/>
+					</svg>
+				</button>
+				<span className="ms-sticky-box-count">5</span>
+				<span className="ms-sticky-box-items">Items Selected</span>
 			</div>
-			<div className="ms-download-icon d-flex align-items-center justify-content-center">
+			<button className="ms-download-icon d-flex align-items-center justify-content-center">
 				<svg
 					width="20"
 					height="20"
@@ -35,7 +37,7 @@ const StickyBox = () => {
 						fill="#4ED6BE"
 					/>
 				</svg>
-			</div>
+			</button>
 		</div>
 	);
 };

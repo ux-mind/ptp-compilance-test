@@ -7,7 +7,7 @@ const Content = () => {
 	return (
 		<div className="ms-content-wrapper ms-grid-content-wrapper">
 			<div className="container-fluid">
-				<div className="row pb-4 ms-right-sidebar-column-row">
+				<div className="row ms-right-sidebar-column-row">
 					<div className="col-md-12">
 						<div className="ms-tabs-wrapper p-4">
 							<Tabs />
