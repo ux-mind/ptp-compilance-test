@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Pagination from './Pagination/Pagination';
 import StickyBox from './StickyBox/StickyBox';
 
-import sorting from '../../../../assets/images/Sorting.png';
+// import sorting from '../../../../assets/images/Sorting.png';
 import addComment from '../../../../assets/images/addcomment.png';
 import next from '../../../../assets/images/next.png';
 import uploadReport from '../../../../assets/images/uploadreport.png';
@@ -78,6 +78,20 @@ const data = [
 ];
 
 const Table = () => {
+	const [selectedItemsId, setSelectedItemsId] = useState([]);
+
+	function handleSelectedItems(evt, id) {
+		const target = evt.target;
+
+		if (target.checked) {
+			setSelectedItemsId((prev) => [...prev, id]);
+		} else {
+			const newSelectedItemsId = selectedItemsId.filter((selectedId) => selectedId !== id);
+
+			setSelectedItemsId(newSelectedItemsId);
+		}
+	}
+
 	return (
 		<>
 			<div className="ms-table-wrapper position-relative">
@@ -157,7 +171,12 @@ const Table = () => {
 							return (
 								<tr key={data.id}>
 									<td>
-										<input id={data.id} type="checkbox" />
+										<input
+											id={data.id}
+											type="checkbox"
+											name="tax"
+											onChange={(evt) => handleSelectedItems(evt, data.id)}
+										/>
 										<label htmlFor={data.id}></label>
 									</td>
 									<td>{data.year}</td>
@@ -224,7 +243,7 @@ const Table = () => {
 				</table>
 			</div>
 			<Pagination />
-			<StickyBox />
+			<StickyBox items={selectedItemsId} />
 		</>
 	);
 };

@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // TODO: configure popup
-const StickyBox = () => {
+const StickyBox = ({ items }) => {
+	const [isVisible, setIsVisible] = useState(false);
+
+	useEffect(() => {
+		if (items.length) {
+			setIsVisible(true);
+		} else {
+			setIsVisible(false);
+		}
+	}, [items]);
+
+	if (!isVisible) {
+		return null;
+	}
+
 	return (
 		<div className="ms-defaultValue-sticky-box d-flex align-items-center justify-content-between">
 			<div className="text-white d-flex w-100 align-items-center">
-				<button className="ms-sticky-box-close">
+				<button className="ms-sticky-box-close" onClick={() => setIsVisible(false)}>
 					<svg
 						width="12"
 						height="12"
@@ -19,7 +33,7 @@ const StickyBox = () => {
 						/>
 					</svg>
 				</button>
-				<span className="ms-sticky-box-count">5</span>
+				<span className="ms-sticky-box-count">{items.length}</span>
 				<span className="ms-sticky-box-items">Items Selected</span>
 			</div>
 			<button className="ms-download-icon d-flex align-items-center justify-content-center">
