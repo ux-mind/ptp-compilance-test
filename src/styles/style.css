@@ -218,8 +218,13 @@ h6 {
 /*----- Table CSS -----*/
 @media (max-width: 1400px) {
 	.ms-table-wrapper {
-		height: calc(100vh - 163px);
+		/* height: calc(100vh - 163px); */
 		overflow: scroll;
+		/* min-width: 1100px; */
+	}
+	.ms-table-wrapper tbody {
+		/* overflow-x: scroll; */
+		min-width: 1100px;
 	}
 }
 .ms-table {
@@ -1120,4 +1125,49 @@ input:checked + .slider:before {
 	color: inherit;
 	margin: 0;
 	text-transform: uppercase;
+}
+
+.ms-dots {
+	width: 30px;
+	height: 30px;
+	display: grid;
+	place-items: center;
+	padding: 0;
+	border-radius: 50%;
+	background: #f1f2f5;
+	border: none;
+	flex-shrink: 0;
+}
+
+.ms-table-sort {
+	margin-left: 3px;
+	width: 12px;
+	height: 24px;
+	display: grid;
+	grid-template-rows: 50% 50%;
+}
+
+.ms-table-sort button {
+	width: 12px;
+	height: 12px;
+	border: none;
+	background: transparent;
+}
+
+.ms-table-sort button:first-child {
+	background: url('../assets/images/chevron-up.svg') no-repeat 50%;
+}
+
+.ms-table-sort button:last-child {
+	background: url('../assets/images/chevron-down.svg') no-repeat 50%;
+}
+
+.ms-table td {
+	white-space: nowrap;
+}
+
+.ms-pagination-numbers {
+	font-size: 14px;
+	line-height: calc(17 / 14);
+	font-weight: 500;
 }

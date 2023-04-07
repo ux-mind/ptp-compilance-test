@@ -65,11 +65,11 @@ const Pagination = () => {
 			</div>
 			<div className="col-4">
 				<div className="d-flex justify-content-end align-items-center">
-					<p className="mb-0 me-4">1-50 of 130</p>
+					<p className="mb-0 me-4">1-10 of 130</p>
 					<select className="form-select me-2" aria-label="Default select example">
-						<option defaultValue>50</option>
-						<option defaultValue="1">100</option>
-						<option defaultValue="2">150</option>
+						<option defaultValue>10</option>
+						<option defaultValue="1">20</option>
+						<option defaultValue="2">30</option>
 					</select>
 					<p className="mb-0">Per Row</p>
 				</div>
