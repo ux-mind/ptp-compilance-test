@@ -1285,11 +1285,119 @@ input:checked + .slider:before {
 	background: #4ad7e3;
 }
 
-/* .pagination-wrapper {
-	display: flex;
-	justify-content: center;
+.report-submission-save {
+	border: none;
+	color: #fff;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: -0.01em;
+	padding: 8px 22px;
+	padding-left: 36px;
+	position: relative;
 }
 
-.pagination-wrapper ul {
+.report-submission-save::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	transform: translateY(-50%);
+	width: 15px;
+	height: 15px;
+	background: url('../assets/images/save-icon.svg') no-repeat 50%;
+}
 
-} */
+.report-submission-edit {
+	border: none;
+	color: #6b7280;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: -0.01em;
+	padding: 8px 22px;
+	padding-left: 36px;
+	position: relative;
+}
+
+.report-submission-edit::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	transform: translateY(-50%);
+	width: 15px;
+	height: 15px;
+	background: url('../assets/images/gray-pencil.svg') no-repeat 50%;
+}
+
+.resubmission-form select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 1px;
+	text-overflow: '';
+	margin: 0;
+	font-size: 14px;
+	padding: 6px 12px !important;
+}
+
+.resubmission-form input {
+	margin: 0;
+	font-size: 14px;
+}
+
+.resubmission-form {
+	box-shadow: none !important;
+	border-radius: 12px;
+}
+
+.resubmission-form .date-wrapper {
+	margin-bottom: 20px;
+}
+
+.resubmission-form .date-wrapper:last-child {
+	margin-bottom: 0;
+}
+
+.resubmission-form .text-end {
+	padding-top: 12px;
+	border-top: 1px solid #efefef;
+	padding-bottom: 18px;
+}
+
+.resubmission-form select::-ms-expand {
+	display: none;
+}
+
+.ms-add-company-financials {
+	border-radius: 12px;
+}
+
+.ms-add-company-financials .resubmission-form {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.ms-add-company-financials .ms-heading-bg {
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+.ms-add-company-financials .select-wrapper {
+	display: flex;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.ms-add-company-financials .select-wrapper:last-child {
+	margin-bottom: 0;
+}
+
+.ms-add-company-financials .select-wrapper::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+	width: 14px;
+	height: 7px;
+	background: url('../assets/images/chevron-drop.svg') no-repeat 50%;
+}
