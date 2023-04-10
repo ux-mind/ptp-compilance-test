@@ -26,7 +26,7 @@ const SearchRow = () => {
 	}, []);
 
 	return (
-		<div className="ms-top-area d-flex justify-content-end position-relative mb-2">
+		<div className="ms-top-area w-100 d-flex justify-content-end position-relative mb-2">
 			<form className="position-relative">
 				<input type="text" placeholder="Search Something..." fdprocessedid="qy0iu" />
 				<img className="ms-search-icon" src={searchIcon} alt="Search Icon" />

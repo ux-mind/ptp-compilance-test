@@ -6,76 +6,7 @@ import StickyBox from './StickyBox/StickyBox';
 import exportIcon from '../../../../assets/images/export.svg';
 import editIcon from '../../../../assets/images/edit-pen.svg';
 
-const data = [
-	{
-		id: 'tax_1',
-		year: '2022',
-		company: 'ONEOK Elkcreek Pipeline',
-		companyLink: '#',
-		state: 'WY',
-		category: 'WY Pipeline',
-		dueDate: '07/05/2022',
-		submissionDate: '07/05/2022',
-		status: 'WY pipeline'
-	},
-	{
-		id: 'tax_2',
-		year: '2020',
-		company: 'ONEOK Elkcreek Pipeline',
-		companyLink: '#',
-		state: 'CO',
-		category: 'CO Pipeline',
-		dueDate: '15/08/2023',
-		submissionDate: '15/08/2023',
-		status: 'CO pipeline'
-	},
-	{
-		id: 'tax_3',
-		year: '2022',
-		company: 'ONEOK Elkcreek Pipeline',
-		companyLink: '#',
-		state: 'WY',
-		category: 'WY Pipeline',
-		dueDate: '07/05/2022',
-		submissionDate: '07/05/2022',
-		status: 'WY pipeline'
-	},
-	{
-		id: 'tax_4',
-		year: '2022',
-		company: 'ONEOK Elkcreek Pipeline',
-		companyLink: '#',
-		state: 'WY',
-		category: 'WY Pipeline',
-		dueDate: '07/05/2022',
-		submissionDate: '07/05/2022',
-		status: 'WY pipeline'
-	},
-	{
-		id: 'tax_5',
-		year: '2022',
-		company: 'ONEOK Elkcreek Pipeline',
-		companyLink: '#',
-		state: 'WY',
-		category: 'WY Pipeline',
-		dueDate: '07/05/2022',
-		submissionDate: '07/05/2022',
-		status: 'WY pipeline'
-	},
-	{
-		id: 'tax_6',
-		year: '2022',
-		company: 'ONEOK Elkcreek Pipeline',
-		companyLink: '#',
-		state: 'WY',
-		category: 'WY Pipeline',
-		dueDate: '07/05/2022',
-		submissionDate: '07/05/2022',
-		status: 'WY pipeline'
-	}
-];
-
-const Table = () => {
+const Table = ({ data, visibleData, setVisibleData }) => {
 	const [selectedItemsId, setSelectedItemsId] = useState([]);
 
 	function handleSelectedItems(evt, id) {
@@ -165,7 +96,11 @@ const Table = () => {
 							</th>
 							<th>OPTIONS</th>
 						</tr>
-						{data.map((data) => {
+						{data.map((data, idx) => {
+							if (idx >= visibleData) {
+								return null;
+							}
+
 							return (
 								<tr key={data.id}>
 									<td>
@@ -235,7 +170,7 @@ const Table = () => {
 					</tbody>
 				</table>
 			</div>
-			<Pagination />
+			<Pagination setVisibleData={setVisibleData} />
 			<StickyBox items={selectedItemsId} />
 		</>
 	);
