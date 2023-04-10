@@ -1,29 +1,24 @@
 import React from 'react';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
-import { useFormik } from 'formik';
+import { Form, Formik, Field } from 'formik';
+
+const Input = ({ field, form, ...props }) => {
+	return <input {...field} {...props} />;
+};
 
 const ReportSubmission = () => {
-	const formik = useFormik({
-		initialValues: {
-			email: ''
-		},
-		onSubmit: (values) => {
-			console.log(values);
-		}
-	});
-
 	return (
 		<div className="ms-body-wrapper">
 			<Header />
 			<Sidebar />
-			<div className="ms-content-wrapper">
+			<div className="ms-content-wrapper ms-form-content-wrapper">
 				<div className="container-fluid px-0">
-					<div className="row pb-4">
+					<div className="row h-100">
 						<div className="col-md-12">
 							<div className="ms-tabs-wrapper ms-add-company-financials pt-4">
-								<h5 className="mb-3 px-5">Final Report Submission</h5>
-								<div className="ms-heading-bg p-3 px-5 rounded mb-4 ">
+								<h5 className="mb-3 form-title">Final Report Submission</h5>
+								<div className="ms-heading-bg py-3 px-5 rounded mb-4 ">
 									<div className="d-flex align-items-center ms-managed-detail-top">
 										<div className="me-5 d-flex align-items-center">
 											<h6 className="text-white mb-0">
@@ -73,97 +68,105 @@ const ReportSubmission = () => {
 										</div>
 									</div>
 								</div>
-								<form
-									onSubmit={formik.handleSubmit}
-									className="resubmission-form row mt-4 ms-filter-dropdown p-0 px-3 ms-box-shadow-none border-0"
+								<Formik
+									initialValues={{
+										taxYear: '2022',
+										companyName: 'ONEOK Elkcreek Pipeline',
+										state: 'WY',
+										reportCategory: 'WY pipeline',
+										dueDate: '',
+										status: 'Not submitted',
+										submissionDate: ''
+									}}
+									onSubmit={(values) => {
+										console.log(values);
+									}}
 								>
-									<div className="col-md-4">
-										<div className="h-100 ms-border-box p-3 py-4">
-											<label>TAX YEAR</label>
-											<div className="select-wrapper">
-												<select name="tax-year">
-													<option>2022</option>
-													<option>2023</option>
-													<option>2024</option>
-												</select>
+									{(props) => (
+										<Form className="resubmission-form row ms-filter-dropdown p-0 px-3 ms-box-shadow-none border-0">
+											<div className="col-md-4">
+												<div className="ms-border-box p-3 py-4">
+													<label>TAX YEAR</label>
+													<div className="select-wrapper">
+														<Field as="select" name="taxYear">
+															<option value="2022">2022</option>
+															<option value="2023">2023</option>
+															<option value="2024">2024</option>
+														</Field>
+													</div>
+													<label>COMPANY_NAME</label>
+													<div className="select-wrapper">
+														<Field as="select" name="companyName">
+															<option>ONEOK Elkcreek Pipeline</option>
+															<option>ONEOK Elkcreek Pipeline</option>
+															<option>ONEOK Elkcreek Pipeline</option>
+														</Field>
+													</div>
+													<label>STATE</label>
+													<div className="select-wrapper">
+														<Field as="select" name="state">
+															<option>WY</option>
+															<option>2023</option>
+															<option>2024</option>
+														</Field>
+													</div>
+													<label>REPORT_CATEGORY</label>
+													<div className="select-wrapper">
+														<Field as="select" name="reportCategory">
+															<option>WY pipeline</option>
+															<option>CO pipeline</option>
+															<option>CO pipeline</option>
+														</Field>
+													</div>
+												</div>
 											</div>
-											<label>COMPANY_NAME</label>
-											<div className="select-wrapper">
-												<select name="company-name">
-													<option>ONEOK Elkcreek Pipeline</option>
-													<option>2023</option>
-													<option>2024</option>
-												</select>
+											<div className="col-md-4">
+												<div className="ms-border-box p-3 py-4">
+													<div className="date-wrapper">
+														<label>DUE_DATE</label>
+														<Field
+															type="date"
+															id="start"
+															name="dueDate"
+														/>
+													</div>
+													<label>STATUS</label>
+													<div className="select-wrapper">
+														<Field as="select" name="status">
+															<option>Not submitted</option>
+															<option>2023</option>
+															<option>2024</option>
+														</Field>
+													</div>
+													<div className="date-wrapper">
+														<label>SUBMISSION_DATE</label>
+														<Field
+															type="date"
+															id="start"
+															name="submissionDate"
+														/>
+													</div>
+												</div>
 											</div>
-											<label>STATE</label>
-											<div className="select-wrapper">
-												<select name="state">
-													<option>WY</option>
-													<option>2023</option>
-													<option>2024</option>
-												</select>
+											<div className="col-md-12 mt-auto text-end-wrapper">
+												<div className="text-end">
+													<a
+														href="#"
+														className="ms-primary-btn ms-secondary-btn report-submission-edit"
+													>
+														Edit
+													</a>
+													<button
+														type="submit"
+														className="report-submission-save ms-primary-btn ms-2"
+													>
+														Save
+													</button>
+												</div>
 											</div>
-											<label>REPORT_CATEGORY</label>
-											<div className="select-wrapper">
-												<select name="report-category">
-													<option>WY pipeline</option>
-													<option>CO pipeline</option>
-													<option>CO pipeline</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<div className="col-md-4">
-										<div className="h-100 ms-border-box p-3 py-4">
-											<div className="date-wrapper">
-												<label>DUE_DATE</label>
-												<input
-													type="date"
-													id="start"
-													name="due-date"
-													// value="2023-03-23"
-													min="2023-01-01"
-													max="2099-12-31"
-												/>
-											</div>
-											<label>STATUS</label>
-											<div className="select-wrapper">
-												<select name="status">
-													<option>Not submitted</option>
-													<option>2023</option>
-													<option>2024</option>
-												</select>
-											</div>
-											<div className="date-wrapper">
-												<label>SUBMISSION_DATE</label>
-												<input
-													type="date"
-													id="start"
-													name="submission-date"
-													// value="2023-03-23"
-													min="2023-01-01"
-													max="2099-12-31"
-												/>
-											</div>
-										</div>
-									</div>
-									<div className="col-md-12 mt-4">
-										<div className="text-end">
-											<a
-												href="#"
-												className="ms-primary-btn ms-secondary-btn report-submission-edit"
-											>
-												Edit
-											</a>
-											<button
-												type="submit"
-												className="report-submission-save ms-primary-btn ms-2"
-											>
-												Save
-											</button>
-										</div>
-									</div>
-								</form>
+										</Form>
+									)}
+								</Formik>
 							</div>
 						</div>
 					</div>

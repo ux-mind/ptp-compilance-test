@@ -1342,11 +1342,21 @@ input:checked + .slider:before {
 .resubmission-form input {
 	margin: 0;
 	font-size: 14px;
+	border: 1px solid #d1d5db;
+	padding: 6px 12px !important;
+}
+
+.resubmission-form label {
+	font-size: 14px;
 }
 
 .resubmission-form {
 	box-shadow: none !important;
 	border-radius: 12px;
+	flex-grow: 1;
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
 }
 
 .resubmission-form .date-wrapper {
@@ -1395,9 +1405,65 @@ input:checked + .slider:before {
 	content: '';
 	position: absolute;
 	top: 50%;
-	right: 15px;
+	right: 14px;
 	transform: translateY(-50%);
 	width: 14px;
 	height: 7px;
+	pointer-events: none;
 	background: url('../assets/images/chevron-drop.svg') no-repeat 50%;
+}
+
+.ms-tabs-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.ms-form-content-wrapper {
+	padding: 0 25px 20px 105px;
+}
+
+.text-end-wrapper {
+	max-height: max-content;
+}
+
+.ms-filter-dropdown {
+	min-width: auto;
+}
+
+.ms-dots-dropdown a {
+	display: grid;
+	grid-template-columns: 27px auto;
+	color: #6e7890 !important;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.ms-tabs-wrapper .form-title {
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
+.ms-heading-bg {
+	padding-left: 26px;
+	padding-right: 26px;
+}
+
+.report-create {
+	border: none;
+	color: #fff;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: -0.01em;
+	padding: 8px 22px;
+	position: relative;
+}
+
+.report-cancel {
+	border: none;
+	color: #6b7280;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: -0.01em;
+	padding: 8px 22px;
+	position: relative;
 }

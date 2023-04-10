@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './pages/Home';
 import ReportSubmission from './pages/ReportSubmission';
+import CreateReport from './pages/CreateReport';
 
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
@@ -15,7 +16,8 @@ const App = () => {
 			<HashRouter>
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/final-submission-add-screen" element={<ReportSubmission />} />
+					<Route path="/final-submission-screen" element={<ReportSubmission />} />
+					<Route path="/final-submission-add-screen" element={<CreateReport />} />
 				</Routes>
 			</HashRouter>
 		</div>

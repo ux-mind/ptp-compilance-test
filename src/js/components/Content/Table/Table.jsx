@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import Pagination from './Pagination/Pagination';
 import StickyBox from './StickyBox/StickyBox';
 
-// import sorting from '../../../../assets/images/Sorting.png';
-import addComment from '../../../../assets/images/addcomment.png';
-import next from '../../../../assets/images/next.png';
-import uploadReport from '../../../../assets/images/uploadreport.png';
-import changeStatus from '../../../../assets/images/changestatus.png';
+import exportIcon from '../../../../assets/images/export.svg';
+import editIcon from '../../../../assets/images/edit-pen.svg';
 
 const data = [
 	{
@@ -221,18 +218,13 @@ const Table = () => {
 											</svg>
 										</button>
 										<div className="ms-dots-dropdown position-absolute">
-											<a href="#.">
-												<img src={addComment} />
-												&nbsp; Add Comment&nbsp;
-												<img src={next} />
+											<a>
+												<img src={exportIcon} />
+												Edit
 											</a>
-											<a href="#.">
-												<img src={uploadReport} />
-												&nbsp; Upload Report
-											</a>
-											<a href="#.">
-												<img src={changeStatus} />
-												&nbsp; Change Status
+											<a href="#">
+												<img src={editIcon} />
+												Export
 											</a>
 										</div>
 									</td>

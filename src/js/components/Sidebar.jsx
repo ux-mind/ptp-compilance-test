@@ -13,7 +13,7 @@ const Sidebar = () => {
 			>
 				<ul className="ms-sidebar-menu p-0">
 					<li>
-						<a href="#.">
+						<a>
 							<svg
 								width="24"
 								height="24"
@@ -64,7 +64,7 @@ const Sidebar = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#.">
+						<a>
 							<svg
 								width="24"
 								height="24"
@@ -133,7 +133,7 @@ const Sidebar = () => {
 				<div className="ms-sidebar-menu ms-bottom-area position-absolute bottom-0">
 					<ul className="p-0">
 						<li>
-							<a href="#.">
+							<a>
 								<svg
 									width="24"
 									height="24"
@@ -156,7 +156,7 @@ const Sidebar = () => {
 							</a>
 						</li>
 						<li>
-							<a href="#.">
+							<a>
 								<svg
 									width="24"
 									height="24"

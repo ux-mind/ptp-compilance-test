@@ -121,7 +121,6 @@ const SearchRow = () => {
 											<option>Wyoming</option>
 										</select>
 										<label>Tax Year</label>
-
 										<select>
 											<option>Select</option>
 											<option>2023</option>
@@ -174,13 +173,9 @@ const SearchRow = () => {
 									</div>
 								</div>
 								<div className="ms-filter-buttons d-flex align-items-center justify-content-end mt-3">
-									<a href="#." className="ms-primary-btn ms-secondary-btn">
-										Reset
-									</a>
+									<a className="ms-primary-btn ms-secondary-btn">Reset</a>
 									&nbsp;
-									<a className="ms-primary-btn ms-apply-btn" href="#.">
-										Apply Now
-									</a>
+									<a className="ms-primary-btn ms-apply-btn">Apply Now</a>
 								</div>
 							</li>
 						</ul>
@@ -311,7 +306,6 @@ const SearchRow = () => {
 					</div>
 				</div>
 			</div>
-			{/* TODO: Add New Model Popup End  */}
 			<div className="ms-icon-btn ms-dots-icon d-flex align-items-center justify-content-center">
 				<svg
 					width="18"
@@ -328,7 +322,7 @@ const SearchRow = () => {
 					/>
 				</svg>
 				<div className="ms-dots-dropdown position-absolute">
-					<a href="#.">
+					<a>
 						<svg
 							width="16"
 							height="16"
