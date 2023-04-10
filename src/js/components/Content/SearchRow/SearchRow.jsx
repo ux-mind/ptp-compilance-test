@@ -52,7 +52,7 @@ const SearchRow = () => {
 							</svg>
 						</a>
 						<ul
-							className="dropdown-menu ms-filter-dropdown position-absolute"
+							className="dropdown-menu dropdown-menu-search ms-filter-dropdown position-absolute"
 							style={{ display: `${searchMenuOpened ? 'block' : 'none'}` }}
 						>
 							<li>
