@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
 	const [sidebarOpened, setSidebarOpened] = useState(false);
@@ -13,7 +14,7 @@ const Sidebar = () => {
 			>
 				<ul className="ms-sidebar-menu p-0">
 					<li>
-						<a>
+						<Link to="/">
 							<svg
 								width="24"
 								height="24"
@@ -43,10 +44,10 @@ const Sidebar = () => {
 								></path>
 							</svg>
 							<span className="ms-sidemenu-text">Dashboard</span>
-						</a>
+						</Link>
 					</li>
 					<li className="active">
-						<a href="models">
+						<Link to="/">
 							<svg
 								width="24"
 								height="24"
@@ -61,10 +62,10 @@ const Sidebar = () => {
 								></path>
 							</svg>
 							<span className="ms-sidemenu-text">Models</span>
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a>
+						<Link to="/">
 							<svg
 								width="24"
 								height="24"
@@ -99,10 +100,10 @@ const Sidebar = () => {
 								></path>
 							</svg>
 							<span className="ms-sidemenu-text">Reports</span>
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a href="managed_data.html">
+						<Link to="/">
 							<svg
 								width="24"
 								height="24"
@@ -127,7 +128,7 @@ const Sidebar = () => {
 								></path>
 							</svg>
 							<span className="ms-sidemenu-text">Database</span>
-						</a>
+						</Link>
 					</li>
 				</ul>
 				<div className="ms-sidebar-menu ms-bottom-area position-absolute bottom-0">

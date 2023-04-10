@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Pagination from './Pagination/Pagination';
 import StickyBox from './StickyBox/StickyBox';
 
@@ -218,10 +219,10 @@ const Table = () => {
 											</svg>
 										</button>
 										<div className="ms-dots-dropdown position-absolute">
-											<a>
+											<Link to="/final-submission-screen">
 												<img src={exportIcon} />
 												Edit
-											</a>
+											</Link>
 											<a href="#">
 												<img src={editIcon} />
 												Export

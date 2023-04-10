@@ -2,7 +2,7 @@ import React from 'react';
 
 import mainLogoPNG from '../../assets/images/mein-logo.png';
 import mainLogoSVG from '../../assets/images/main-logo.svg';
-import ProfileImg from '../../assets/images/profile_image.svg';
+import ProfileImg from '../../assets/images/profile_image.png';
 
 const Header = () => {
 	return (
