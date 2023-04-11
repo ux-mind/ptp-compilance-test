@@ -5,7 +5,7 @@ import Table from './Table/Table';
 
 const data = [
 	{
-		id: 'tax_1',
+		id: 1,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -16,7 +16,7 @@ const data = [
 		status: 'WY pipeline'
 	},
 	{
-		id: 'tax_2',
+		id: 2,
 		year: '2020',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -27,7 +27,7 @@ const data = [
 		status: 'CO pipeline'
 	},
 	{
-		id: 'tax_3',
+		id: 3,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -38,7 +38,7 @@ const data = [
 		status: 'WY pipeline'
 	},
 	{
-		id: 'tax_4',
+		id: 4,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -49,7 +49,7 @@ const data = [
 		status: 'WY pipeline'
 	},
 	{
-		id: 'tax_5',
+		id: 5,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -60,7 +60,7 @@ const data = [
 		status: 'WY pipeline'
 	},
 	{
-		id: 'tax_6',
+		id: 6,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -71,7 +71,7 @@ const data = [
 		status: 'WY pipeline'
 	},
 	{
-		id: 'tax_7',
+		id: 7,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -82,7 +82,7 @@ const data = [
 		status: 'WY pipeline'
 	},
 	{
-		id: 'tax_8',
+		id: 8,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -93,7 +93,7 @@ const data = [
 		status: 'WY pipeline'
 	},
 	{
-		id: 'tax_9',
+		id: 9,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -104,7 +104,7 @@ const data = [
 		status: 'WY pipeline'
 	},
 	{
-		id: 'tax_10',
+		id: 10,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -115,7 +115,7 @@ const data = [
 		status: 'WY pipeline'
 	},
 	{
-		id: 'tax_11',
+		id: 11,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -126,7 +126,7 @@ const data = [
 		status: 'WY pipeline'
 	},
 	{
-		id: 'tax_12',
+		id: 12,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -137,7 +137,7 @@ const data = [
 		status: 'WY pipeline'
 	},
 	{
-		id: 'tax_13',
+		id: 13,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',
@@ -148,7 +148,7 @@ const data = [
 		status: 'WY pipeline'
 	},
 	{
-		id: 'tax_14',
+		id: 14,
 		year: '2022',
 		company: 'ONEOK Elkcreek Pipeline',
 		companyLink: '#',

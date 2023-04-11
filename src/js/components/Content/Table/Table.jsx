@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Pagination from './Pagination/Pagination';
 import StickyBox from './StickyBox/StickyBox';
@@ -21,6 +21,21 @@ const Table = ({ data, visibleData, setVisibleData }) => {
 		}
 	}
 
+	const handleCheckAllClick = (evt) => {
+		const target = evt.target;
+
+		if (target.checked) {
+			const dataIDsSorted = data
+				.map((data) => data.id)
+				.sort((a, b) => a - b)
+				.filter((id, idx) => idx <= visibleData - 1);
+
+			setSelectedItemsId([...dataIDsSorted]);
+		} else {
+			setSelectedItemsId([]);
+		}
+	};
+
 	return (
 		<>
 			<div className="ms-table-wrapper position-relative">
@@ -28,7 +43,12 @@ const Table = ({ data, visibleData, setVisibleData }) => {
 					<tbody>
 						<tr>
 							<th>
-								<input id="select" type="checkbox" />
+								<input
+									id="select"
+									type="checkbox"
+									onChange={(evt) => handleCheckAllClick(evt)}
+									checked={selectedItemsId.length}
+								/>
 								<label htmlFor="select"></label>
 							</th>
 							<th>
@@ -109,6 +129,7 @@ const Table = ({ data, visibleData, setVisibleData }) => {
 											type="checkbox"
 											name="tax"
 											onChange={(evt) => handleSelectedItems(evt, data.id)}
+											checked={selectedItemsId.includes(data.id)}
 										/>
 										<label htmlFor={data.id}></label>
 									</td>
